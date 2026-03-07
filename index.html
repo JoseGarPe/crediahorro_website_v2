@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Propuestas de actualización — Página principal</title>
+    <style>
+        :root{
+            --bg:#f6f7fb; --card:#ffffff; --muted:#6b7280; --accent:#2563eb;
+            --success:#10b981; --danger:#ef4444; --glass: rgba(255,255,255,0.6);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        *{box-sizing:border-box}
+        body{margin:0;background:linear-gradient(180deg,var(--bg),#eef2ff 60%);color:#0f172a}
+        .container{max-width:1100px;margin:36px auto;padding:24px}
+        header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+        header h1{font-size:1.2rem;margin:0}
+        header p{margin:0;color:var(--muted);font-size:0.95rem}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
+        .card{
+            background:linear-gradient(180deg,var(--card),var(--glass));
+            border-radius:12px;padding:18px;border:1px solid rgba(15,23,42,0.06);
+            box-shadow:0 6px 18px rgba(15,23,42,0.06);
+            display:flex;flex-direction:column;gap:12px;min-height:260px;
+        }
+        .visual{
+            height:120px;border-radius:8px;background:linear-gradient(135deg,#eef2ff,#fff);display:flex;align-items:center;justify-content:center;color:var(--muted);
+            font-weight:600;border:1px dashed rgba(99,102,241,0.12)
+        }
+        .title{display:flex;align-items:center;justify-content:space-between;gap:8px}
+        .title h2{font-size:1.05rem;margin:0}
+        .tag{font-size:0.78rem;padding:6px 8px;border-radius:999px;background:#f1f5f9;color:#0f172a}
+        .list{margin:0;padding-left:18px;color:var(--muted);font-size:0.95rem}
+        .meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:0.9rem}
+        .actions{margin-top:auto;display:flex;gap:8px}
+        button{
+            border:0;padding:8px 12px;border-radius:8px;font-weight:600;cursor:pointer;
+        }
+        .btn-primary{background:linear-gradient(90deg,var(--accent),#7c3aed);color:white}
+        .btn-outline{background:transparent;border:1px solid rgba(15,23,42,0.06)}
+        .badge{font-size:0.78rem;padding:6px 8px;border-radius:8px}
+        .small{font-size:0.85rem;color:var(--muted)}
+        /* expanded details */
+        .details{display:none;background:#fbfdff;border-radius:8px;padding:12px;border:1px solid rgba(37,99,235,0.06)}
+        .details.open{display:block}
+        /* footer */
+        footer{margin-top:22px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:0.9rem}
+        @media (max-width:460px){header{flex-direction:column;align-items:flex-start;gap:6px}}
+    </style>
+</head>
+<body>
+    <div class="container" role="main">
+        <header>
+            <div>
+                <h1>3 propuestas para actualizar la página principal</h1>
+                <p>Comparar y elegir la propuesta que mejor se adapte a objetivos: conversión, modernización y velocidad.</p>
+            </div>
+            <div class="small">Estado: borrador • Última actualización: hoy</div>
+        </header>
+
+        <section class="grid" aria-label="Propuestas">
+            <!-- Propuesta 1: Diseño limpio y conversión -->
+            <article class="card" id="p1">
+                <div class="title">
+                    <h2>Propuesta A </h2>
+                    <div class="tag">Enfoque: Leads</div>
+                </div>
+
+                <div class="visual" aria-hidden="true">
+                    Mockup A
+                </div>
+
+                <ul class="list">
+                    <li>Hero con CTA principal y prueba social</li>
+                    <li>Más minimalista y optimizada</li>
+                    <li>Velocidad optimizada y seguimiento de eventos</li>
+                </ul>
+
+                <div class="meta">
+                    <span class="badge" style="background:#ecfeff;color:#075985">Impacto: alto</span>
+                    <span class="badge" style="background:#fff7ed;color:#b45309">Esfuerzo: medio</span>
+                </div>
+
+                <div class="details" id="d1">
+                    <strong>Detalle:</strong>
+                    <p class="small">Ideal si el objetivo primario es captar leads y mejorar la tasa de conversión. Incluye A/B testing del CTA y microcopy optimizado.</p>
+                </div>
+
+                <div class="actions">
+                    <button class="btn-outline" data-toggle="d1">Ver detalles</button>
+                    <button class="btn-primary" data-href="propuestas/AgriCulture/index.html" data-select="A">Visualizar propuesta A</button>
+                </div>
+            </article>
+
+            <!-- Propuesta 2: Modernización visual -->
+            <article class="card" id="p2">
+                <div class="title">
+                    <h2>Propuesta B</h2>
+                    <div class="tag">Enfoque: Marca</div>
+                </div>
+
+                <div class="visual" aria-hidden="true">
+                    Mockup B
+                </div>
+
+                <ul class="list">
+                    <li>Nuevo sistema de colores y tipografía</li>
+                    <li>Animaciones sutiles y microinteracciones</li>
+                    <li>Secciones destacadas para productos/servicios</li>
+                </ul>
+
+                <div class="meta">
+                    <span class="badge" style="background:#fff0f6;color:#be185d">Impacto: visual</span>
+                    <span class="badge" style="background:#f0fdf4;color:#065f46">Esfuerzo: medio-alto</span>
+                </div>
+
+                <div class="details" id="d2">
+                    <strong>Detalle:</strong>
+                    <p class="small">Recomendado si se busca refrescar la imagen de la marca. Incluye guía de estilos y librería de componentes reutilizables.</p>
+                </div>
+
+                <div class="actions">
+                    <button class="btn-outline" data-toggle="d2">Ver detalles</button>
+                    <button class="btn-primary" data-href="propuestas/Arsha/index.html" data-select="B">Visualizar propuesta B</button>
+                </div>
+            </article>
+
+            <!-- Propuesta 3: Rendimiento y accesibilidad -->
+            <article class="card" id="p3">
+                <div class="title">
+                    <h2>Propuesta C</h2>
+                    <div class="tag">Enfoque: Técnica</div>
+                </div>
+
+                <div class="visual" aria-hidden="true">
+                    Mockup C
+                </div>
+
+                <ul class="list">
+                    <li>Optimización de imágenes y lazy-loading</li>
+                    <li>Mejoras de accesibilidad</li>
+                    <li>Más Dinamica</li>
+                </ul>
+
+                <div class="meta">
+                    <span class="badge" style="background:#eef2ff;color:#3730a3">Impacto: velocidad</span>
+                    <span class="badge" style="background:#fff7ed;color:#b45309">Esfuerzo: alto</span>
+                </div>
+
+                <div class="details" id="d3">
+                    <strong>Detalle:</strong>
+                    <p class="small">Orientada a mejorar métricas Core Web Vitals y experiencia en dispositivos móviles. Incluye auditoría y roadmap técnico.</p>
+                </div>
+
+                <div class="actions">
+                    <button class="btn-outline" data-toggle="d3">Ver detalles</button>
+                    <button class="btn-primary" data-href="propuestas/FlexBiz/FlexBiz/index.html" data-select="C">Visualizar propuesta C</button>
+                </div>
+            </article>
+        </section>
+
+        <footer>
+            <div>Comparar propuestas y compartir con el equipo.</div>
+            <div id="selection" class="small">Ninguna seleccionada</div>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle detalles
+        document.querySelectorAll('[data-toggle]').forEach(btn=>{
+            btn.addEventListener('click',()=> {
+                const id = btn.getAttribute('data-toggle');
+                const el = document.getElementById(id);
+                el.classList.toggle('open');
+                btn.textContent = el.classList.contains('open') ? 'Ocultar detalles' : 'Ver detalles';
+            });
+        });
+
+        // Abrir / visualizar propuesta y mostrar feedback
+        const selectionEl = document.getElementById('selection');
+        document.querySelectorAll('[data-select]').forEach(btn=>{
+            btn.addEventListener('click',()=>{
+                const choice = btn.getAttribute('data-select');
+                const href = btn.getAttribute('data-href');
+                selectionEl.textContent = `Propuesta seleccionada: ${choice}`;
+                // breve feedback visual
+                btn.animate([{transform:'scale(1)'},{transform:'scale(0.98)'},{transform:'scale(1)'}],{duration:200});
+                // Si existe href, abrir en nueva pestaña/ventana
+                if(href){
+                    // usar ruta relativa desde este archivo
+                    window.open(href, '_blank', 'noopener');
+                }
+            });
+        });
+
+        // Tecla rápida: 1/2/3 para seleccionar
+        window.addEventListener('keydown', e=>{
+            if(document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') return;
+            if(e.key === '1') document.querySelector('[data-select="A"]').click();
+            if(e.key === '2') document.querySelector('[data-select="B"]').click();
+            if(e.key === '3') document.querySelector('[data-select="C"]').click();
+        });
+    </script>
+</body>
+</html>
